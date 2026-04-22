@@ -82,6 +82,7 @@ a {
 
 .hero h1 {
   margin: 0 0 0.4rem;
+  animation: heroTitlePulse 2.5s ease-in-out infinite;
 }
 
 .subtitle {
@@ -99,15 +100,27 @@ a {
 .ghost-btn {
   display: inline-block;
   text-decoration: none;
-  border: 2px solid #4a4a4a;
-  background: #dadada;
-  color: #1f1f1f;
+  border: 2px solid #0f4c5c;
+  background: #2a6f97;
+  color: #ffffff;
   padding: 0.45rem 0.7rem;
   font-size: 0.95rem;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .ghost-btn {
-  background: #efefef;
+  border-color: #6a040f;
+  background: #9d0208;
+}
+
+.btn:hover,
+.ghost-btn:hover {
+  background: #1d3557;
+  transform: translateY(-1px);
+}
+
+.ghost-btn:hover {
+  background: #7b0206;
 }
 
 .layer-grid,
@@ -208,6 +221,15 @@ a {
   display: none;
 }
 
+.accordion-panel > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.accordion-panel > * + * {
+  margin-top: 0.75rem;
+}
+
 .accordion-item.open .accordion-panel {
   display: block;
 }
@@ -245,6 +267,26 @@ a {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes heroTitlePulse {
+  0%,
+  100% {
+    opacity: 1;
+    letter-spacing: 0.02em;
+    text-shadow: none;
+  }
+  50% {
+    opacity: 0.9;
+    letter-spacing: 0.06em;
+    text-shadow: 0 0 14px rgba(42, 111, 151, 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero h1 {
+    animation: none;
   }
 }
 
