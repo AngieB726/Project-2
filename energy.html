@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The AI Footprint | Energy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo"><i class="fa-solid fa-microchip"></i> The AI Footprint</div>
+      <button class="menu-toggle" type="button"><i class="fa-solid fa-bars"></i> Menu</button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="energy.html">Energy</a>
+        <a href="water.html">Water</a>
+        <a href="materials.html">Materials</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="rough-panel">
+      <h1 class="section-head">Energy</h1>
+      <div class="accordion-item open">
+        <button class="accordion-btn" type="button">
+          <i class="fa-solid fa-bolt"></i> Training and Inference
+        </button>
+        <div class="accordion-panel">
+          <p>
+            Large AI models require substantial energy during training, processing massive datasets across specialized
+            processors for extended periods.
+          </p>
+          <p>
+            After training, inference continues to consume energy each time users submit prompts, generate content, or run
+            model-based tools.
+          </p>
+        </div>
+      </div>
+      <div class="accordion-item open">
+        <button class="accordion-btn" type="button">
+          <i class="fa-solid fa-building"></i> Data Centers and Emissions
+        </button>
+        <div class="accordion-panel">
+          <p>
+            AI workloads are concentrated in large data centers that require stable, high-capacity electricity and
+            continuous operation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="rough-panel">
+      <h2 class="section-head">Factors Influencing AI Energy Impact</h2>
+      <table class="info-table">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>What It Affects</th>
+            <th>Environmental Implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Grid Carbon Intensity</td>
+            <td>Emissions per unit of electricity</td>
+            <td>Fossil-fuel grids increase AI-related carbon output</td>
+          </tr>
+          <tr>
+            <td>Hardware Efficiency</td>
+            <td>Energy required per computation</td>
+            <td>Efficient processors reduce electricity demand</td>
+          </tr>
+          <tr>
+            <td>Cooling Design</td>
+            <td>Total facility power load</td>
+            <td>Inefficient cooling increases system-wide energy use</td>
+          </tr>
+          <tr>
+            <td>Renewable Energy Sourcing</td>
+            <td>Energy origin</td>
+            <td>Renewable procurement lowers carbon intensity</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="rough-panel">
+      <h2 class="section-head">Continue Exploring AI and the Environment</h2>
+      <div class="three-col">
+        <a class="card" href="energy.html">Energy - View Energy</a>
+        <a class="card" href="water.html">Water - View Water</a>
+        <a class="card" href="materials.html">Materials - View Materials</a>
+      </div>
+      <p><a class="btn" href="resources.html">View Resources</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <strong>The AI Footprint</strong>
+      <p>Examining the physical infrastructure behind digital intelligence.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="energy.html">Energy</a>
+        <a href="water.html">Water</a>
+        <a href="materials.html">Materials</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+      <small>&copy; 2026 The AI Footprint - For educational and research purposes.</small>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

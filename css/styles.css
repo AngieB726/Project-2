@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+  color: #1f1f1f;
+  background: #f4f4f4;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  position: relative;
+  z-index: 1000;
+  background: #2f2f2f;
+  color: #fff;
+  border-bottom: 3px solid #1a1a1a;
+}
+
+.header-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.menu-toggle {
+  display: none;
+  background: #404040;
+  border: 1px solid #666;
+  color: #fff;
+  padding: 0.35rem 0.55rem;
+  cursor: pointer;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 0.25rem 0.35rem;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  border-bottom-color: #fff;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.rough-panel {
+  background: #fff;
+  border: 2px solid #b4b4b4;
+  box-shadow: 3px 3px 0 #d8d8d8;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 0.4rem;
+}
+
+.subtitle {
+  margin: 0.3rem 0 1rem;
+  color: #4f4f4f;
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.btn,
+.ghost-btn {
+  display: inline-block;
+  text-decoration: none;
+  border: 2px solid #4a4a4a;
+  background: #dadada;
+  color: #1f1f1f;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.95rem;
+}
+
+.ghost-btn {
+  background: #efefef;
+}
+
+.layer-grid,
+.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.card {
+  border: 2px solid #c4c4c4;
+  background: #f9f9f9;
+  padding: 0.75rem;
+}
+
+.image-block {
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(120deg, #d9d9d9, #b9b9b9);
+  border: 2px solid #a8a8a8;
+  margin: 0.4rem 0 0.7rem;
+}
+
+.core-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border: 2px solid #a8a8a8;
+  margin: 0.4rem 0 0.7rem;
+}
+
+.topic-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: cover;
+  border: 2px solid #a8a8a8;
+  margin: 0.35rem 0 0.7rem;
+}
+
+.section-head {
+  margin-top: 0;
+}
+
+.icon-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.quick-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.fact {
+  background: #f2f2f2;
+  border: 1px solid #bbb;
+  padding: 0.7rem;
+}
+
+.fact i {
+  margin-right: 0.35rem;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info-table th,
+.info-table td {
+  border: 1px solid #999;
+  text-align: left;
+  vertical-align: top;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.accordion-item {
+  border: 1px solid #9e9e9e;
+  margin-bottom: 0.5rem;
+  background: #f8f8f8;
+}
+
+.accordion-btn {
+  width: 100%;
+  text-align: left;
+  border: 0;
+  background: #dcdcdc;
+  padding: 0.6rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.accordion-panel {
+  padding: 0.7rem;
+  display: none;
+}
+
+.accordion-item.open .accordion-panel {
+  display: block;
+}
+
+.site-footer {
+  margin-top: 1rem;
+  background: #2f2f2f;
+  color: #f1f1f1;
+  border-top: 3px solid #1a1a1a;
+}
+
+.footer-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.6rem 0;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  border-bottom: 1px dashed #f1f1f1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .layer-grid,
+  .three-col,
+  .quick-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-toggle {
+    display: inline-block;
+  }
+
+  .site-nav {
+    position: absolute;
+    right: 1rem;
+    top: 56px;
+    z-index: 1001;
+    background: #383838;
+    border: 1px solid #5d5d5d;
+    padding: 0.65rem;
+    flex-direction: column;
+    min-width: 180px;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .site-nav.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 1001;
+  }
+
+  .header-inner {
+    position: relative;
+  }
+}
